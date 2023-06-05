@@ -1,0 +1,30 @@
+<div class="title">Записаться онлайн</div>
+<div class="notification" *ngIf="message!=''">{{message}}</div>
+  <div class="enroll__form">
+    <form>
+      <label>
+        Имя заказчика
+        <div>
+          <input type="text" name="phone" [(ngModel)]="note.name">
+        </div>
+      </label>
+      <label>
+        Номер телефона
+        <div>
+          <input type="text" name="phone" [(ngModel)]="note.phone">
+        </div>
+      </label>
+      <label>
+        Модель телефона
+        <div>
+          <input type="text" name="model" [(ngModel)]="note.model">
+        </div>
+      </label>
+      <div class="padding"></div>
+      <div class="enroll__form__actionText">При записи вы получаете скидку 10%</div>
+      <div class="buttonContainer">
+        <div class="button" (click)="createNote()">Записаться</div>
+      </div>
+    </form>
+  </div>
+

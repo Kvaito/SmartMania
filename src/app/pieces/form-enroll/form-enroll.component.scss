@@ -1,0 +1,47 @@
+.enroll>div{
+  flex-basis: 50%;
+}
+.enroll__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.notification{
+  text-align: center;
+  padding: 20px;
+  animation: notification 1s;
+}
+.enroll__form__actionText{
+  text-align: center;
+  padding: 10px;
+}
+.buttonContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonContainer>.button{
+  flex: none;
+  min-width: 80%;
+  max-width: 80%;
+}
+@keyframes notification {
+  from {
+    color:transparent ;
+  }
+  to {
+    color: black;
+  }
+}
+@media (max-width: 700px) {
+  input{
+    width: 90%;
+    height: 50px;
+    font-size: 30px;
+  }
+  .button{
+    max-width: 100%;
+  }
+}

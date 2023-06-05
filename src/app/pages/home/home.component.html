@@ -1,0 +1,35 @@
+<app-banner id="banner"></app-banner>
+<div>
+  <!--Кнопка, по нажатию на которую открывается прайс-->
+  <div *ngIf="!showPrice" class="price__showButton" (click)="showPrice=!showPrice">
+    <div >Прайс</div>
+  </div>
+  <!--  Открывающийся прайс-->
+    <app-price *ngIf="showPrice" (outClosePrice)="closePrice()"></app-price>
+</div>
+<app-variations></app-variations>
+<!--Main content-->
+<div>
+  <div class="block" id="enroll_form">
+    <app-form-enroll></app-form-enroll>
+    <div class="padding"></div>
+  </div>
+  <div>
+    <div class="title" id="map">Где нас найти</div>
+    <app-map></app-map>
+    <div class="padding"></div>
+  </div>
+  <div>
+    <div class="title" id="guarantee">Гарантия</div>
+    <div class="block">
+      <app-guarantee></app-guarantee>
+    </div>
+    <div class="padding"></div>
+    <div class="title">Преимущества</div>
+    <app-advantages></app-advantages>
+  </div>
+<!--  <div>-->
+<!--    <div class="title">Отзывы</div>-->
+<!--    <div class="padding"></div>-->
+<!--  </div>-->
+</div>

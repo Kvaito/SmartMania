@@ -1,0 +1,25 @@
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<section class="top-nav">
+  <div>
+    <div routerLink="/" class="navbar__item">SM</div>
+  </div>
+  <input id="menu-toggle" type="checkbox"/>
+  <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+  <ul class="menu">
+    <li class="navbar__item" (click)="scrollTo('banner')">
+      <div>Главная</div>
+    </li>
+    <li class="navbar__item" (click)="scrollTo('enroll_form')">
+      <div>Запись</div>
+    </li>
+    <li class="navbar__item" (click)="scrollTo('guarantee')">
+      <div>Гарантия</div>
+    </li>
+    <li class="navbar__item" (click)="scrollTo('map')">
+      <div>Контакты</div>
+    </li>
+    <!--    <li  class="navbar__item"> <div routerLink="/crush-test">Краш-тесты</div></li>-->
+  </ul>
+</section>

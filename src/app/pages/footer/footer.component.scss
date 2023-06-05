@@ -1,0 +1,39 @@
+.footer {
+  padding: 20px;
+  padding-top: 40px;
+  margin-top: 80px;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+.footer__navbar__container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.footer__navbar__container>div{
+  cursor: pointer;
+}
+.social__icon {
+  width: 40px;
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+@media screen and (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer__navbar__container{
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar__item{
+    padding: 10px;
+    font-size: 30px;
+  }
+}

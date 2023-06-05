@@ -1,0 +1,18 @@
+<div class="overhaul">
+  <div class="price" >
+    <div class="back" *ngIf="isCategoryReveal" (click)="closeCategory()">🠔</div>
+    <div class="title">ПРАЙС</div>
+    <div class="close" (click)="closePrice()">✕</div>
+    <div *ngIf="!isCategoryReveal" class="price__categoryContainer">
+      <div  *ngFor="let category of sortedServices" class="block price__category"
+            (click)="selectCategory(category)">
+        <div class="price__category__icon" [ngStyle]="{'background-image': 'url(' + category.iconPath + ')'}"></div>
+        <div class="price__category__name">{{category.categoryName}}</div>
+      </div>
+    </div>
+    <div *ngIf="isCategoryReveal" class="category__serviceContainer">
+      <app-category [category]="selectedCategory"></app-category>
+    </div>
+  </div>
+</div>
+

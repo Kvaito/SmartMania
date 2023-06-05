@@ -1,0 +1,26 @@
+<div class="category " >
+  <div class="category__card">
+    <div class="price__category__icon" [ngStyle]="{'background-image': 'url(' + category.iconPath + ')'}"></div>
+    <div class="price__category__name">{{category.categoryName}}</div>
+  </div>
+  <div class="category__table openSlideLeft">
+    <div class="price_service__header">
+      <div>Услуга</div>
+      <div>ПОЛИУРЕТАН</div>
+      <div>ПОЛИУРЕТАН ПРЕМИУМ</div>
+      <div>ТЕКСТУРА</div>
+    </div>
+    <div class="price__service__block" *ngFor="let service of category.services">
+      <div class="price__service__variation service__title">{{service.title}}</div>
+      <div class="price__service__variation">
+        {{service.variants.polyurethane}}р.
+      </div>
+      <div class="price__service__variation">
+        {{service.variants.polyurethane}}р.
+      </div>
+      <div class="price__service__variation">
+        {{service.variants.polyurethane}}р.
+      </div>
+    </div>
+  </div>
+</div>

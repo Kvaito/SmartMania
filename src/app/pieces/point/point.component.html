@@ -1,0 +1,10 @@
+<div class="points row">
+  <div class="point row" *ngFor="let point of points">
+    <div class="point__img" [ngStyle]="{'background-image': 'url(' + point.imgPath + ')'}"></div>
+    <div class="point__info">
+      <div>Адрес: {{point.address}}</div>
+      <div>Телефон: {{point.phone}}</div>
+      <div>Время работы: {{point.workingTimeStart}} - {{point.workingTimeEnd}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,123 @@
+.overhaul {
+  padding-top: 5%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.46);
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+}
+
+.price {
+  position: absolute;
+  border-radius: 15px 0 0 15px;
+  width: 95%;
+  right: 0;
+  height: 70%;
+  background-color: var(--yellow);
+  animation: open 1s;
+}
+
+.close {
+  animation: close 1s;
+}
+@keyframes open {
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+.price__categoryContainer {
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.price__category {
+  height: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.price__category__icon {
+  height: 70%;
+  aspect-ratio: 1/1;
+  border-radius: var(--borderRadius);
+  background-color: white;
+  background-size: 100%;
+}
+
+.price__category__name {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.price_service__header {
+  display: grid;
+  grid-template-columns: 40% 20% 20% 20%;
+}
+
+.price_service__header > div {
+  display: flex;
+  justify-content: center;
+}
+
+.price__service__block {
+  display: grid;
+  grid-template-columns: 40% 20% 20% 20%;
+  border-bottom: 2px solid var(--yellow);
+  padding: 20px;
+}
+
+.price__service__block:hover {
+  background-color: var(--lightYellow);
+}
+
+.price__service__variation {
+  display: flex;
+  justify-content: center;
+}
+
+.category__serviceContainer {
+  height: 80%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.close {
+  position: absolute;
+  font-size: 30px;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.back {
+  position: absolute;
+  font-size: 30px;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .price__categoryContainer {
+    grid-template-columns: 1fr;
+  }
+  .price{
+    height: 90%;
+    width: 80%;
+  }
+}
