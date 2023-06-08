@@ -2,6 +2,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {PRODUCTS} from "../../data/PRODUCTS";
 import {ProductType} from "../../data/ProductType";
 import { trigger, transition, animate, style } from '@angular/animations'
+import {ProductService} from "../../services/product.service";
 @Component({
   selector: 'app-price',
   templateUrl: './price.component.html',
@@ -21,7 +22,7 @@ import { trigger, transition, animate, style } from '@angular/animations'
 })
 export class PriceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private product:ProductService) { }
   @Output() outClosePrice=new EventEmitter()
 
   selectedCategory={
@@ -69,7 +70,7 @@ export class PriceComponent implements OnInit {
 
   closePrice(){
     // this.priceClass='close'
-    this.outClosePrice.emit()
+    this.product.priceOpen=false
     // setTimeout(()=>,1000)
   }
 

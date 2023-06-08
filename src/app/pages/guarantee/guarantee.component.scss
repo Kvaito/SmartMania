@@ -3,7 +3,6 @@
   opacity: 0;
   transform: translateX(40%);
 }
-
 .slideLeft.slideLeftShow {
   opacity: 1;
   transition: all 1.5s;
@@ -44,6 +43,7 @@
   text-align: center;
 }
 @media screen and (max-width: 900px) {
+
   .guarantee__container {
     flex-direction: column;
     justify-content: center;
@@ -54,10 +54,32 @@
     align-items: center;
   }
   .guarantee__img{
-    width: 80%;
+    width: 50%;
   }
   .guarantee__text>p{
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .slideLeft {
+    transform: unset;
+    opacity: 0;
+  }
+  .slideLeft.slideLeftShow {
+    transform: unset;
+
+    transition: all 1.5s;
+    //background-color: #229ED9;
+  }
+  .slideRight {
+    transform: unset;
+
+    /* Скроем элемент в начальном состоянии */
+    opacity: 0;
+  }
+  .slideRight.slideRightShow {
+    transform: unset;
+
+    opacity: 1;
+    transition: all 1.5s;
   }
 }

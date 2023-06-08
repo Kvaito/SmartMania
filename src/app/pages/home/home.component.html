@@ -1,11 +1,12 @@
 <app-banner id="banner"></app-banner>
 <div>
   <!--Кнопка, по нажатию на которую открывается прайс-->
-  <div *ngIf="!showPrice" class="price__showButton" (click)="showPrice=!showPrice">
-    <div >Прайс</div>
+  <div *ngIf="!product.priceOpen" class="price__showButton" (click)="product.priceOpen=!product.priceOpen">
+    <div class="price__showButton__text">Прайс</div>
+    <div class="price__showButton__icon"></div>
   </div>
   <!--  Открывающийся прайс-->
-    <app-price *ngIf="showPrice" (outClosePrice)="closePrice()"></app-price>
+    <app-price *ngIf="product.priceOpen" (outClosePrice)="closePrice()"></app-price>
 </div>
 <app-variations></app-variations>
 <!--Main content-->

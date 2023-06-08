@@ -12,14 +12,16 @@ export class PointComponent implements OnInit {
   points=[
     {
       imgPath:'../../../assets/images/pointLETO.png',
-      address:'ТРЦ Лето, Нахимова, 8 ст13',
+      title:'ТЦ Лето',
+      address:'ул.Нахимова, 8 ст13',
       workingTimeStart:'10:00',
       workingTimeEnd:'20:00',
       phone:'+7‒923‒416‒66‒61'
     },
     {
       imgPath:'../../../assets/images/pointManege.png',
-      address:'Беринга 10, 2 этаж',
+      title:'ТЦ Манеж',
+      address:'ул.Беринга 10, 2 этаж',
       workingTimeStart:'10:00',
       workingTimeEnd:'21:00',
       phone:'+7‒923‒426‒66‒60'

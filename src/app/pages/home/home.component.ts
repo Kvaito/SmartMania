@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductService} from "../../services/product.service";
 
 @Component({
   selector: 'app-home',
@@ -7,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-  showPrice=false
+  constructor(public product:ProductService) { }
+
 
   ngOnInit(): void {
     // this.onEntry()
   }
 
   closePrice(){
-    this.showPrice=false
+    this.product.priceOpen=false
   }
 }

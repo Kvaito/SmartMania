@@ -6,7 +6,7 @@
   background-color: rgba(0, 0, 0, 0.46);
   width: 100vw;
   height: 100vh;
-  z-index: 20;
+  z-index: 100;
 }
 
 .price {
@@ -119,5 +119,12 @@
   .price{
     height: 90%;
     width: 80%;
+  }
+  .price__category__name {
+    padding: 10px;
+    //height: 30%;
+    //display: flex;
+    //align-items: center;
+    //text-align: center;
   }
 }

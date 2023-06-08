@@ -1,4 +1,4 @@
-.price__showButton{
+.price__showButton {
   text-align: center;
   top: 0;
   right: 0;
@@ -7,15 +7,31 @@
   position: fixed;
   height: 30px;
   z-index: 21;
-  border-radius: 0 0 0 15px ;
+  border-radius: 0 0 0 15px;
   cursor: pointer;
 }
 
-.scrollToShow{
-  opacity: 0;
-  transition: opacity 1s;
+.price__showButton__icon {
+  background-image: url("../../../assets/images/price/price-icon.png");
+  background-size: 100%;
 }
-.scrollShow{
-  opacity: 1;
+
+.price__showButton__text {
+
+}
+@media screen and (max-width: 900px) {
+  //.price__showButton {
+  //  width: 50px;
+  //  height: 50px;
+  //  padding: 20px;
+  //}
+  //.price__showButton__icon {
+  //  width: 100%;
+  //  aspect-ratio: 1/1;
+  //}
+  //
+  //.price__showButton__text {
+  //  font-size: 0;
+  //}
 }
 
